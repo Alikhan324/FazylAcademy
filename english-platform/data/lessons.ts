@@ -1,4 +1,21 @@
-export const lessons = [
+export type Lesson = {
+  id: number;
+  courseId: number;
+  title: string;
+  shortTitle: string;
+  description: string;
+  duration: string;
+  badge: string;
+  isPremium: boolean;
+  contentKz: string;
+  contentRu: string;
+  examples: {
+    letter: string;
+    word: string;
+  }[];
+};
+
+export const lessons: Lesson[] = [
   {
     id: 1,
     courseId: 1,
@@ -7,6 +24,7 @@ export const lessons = [
     description: "Ағылшын әріптері және айтылуы",
     duration: "15 min",
     badge: "Lesson 1",
+    isPremium: false,
     contentKz:
       "Ағылшын алфавитінде 26 әріп бар. Әр әріптің өз дыбысталуы болады. Бұл сабақта негізгі әріптерді және қарапайым сөздерді жаттаймыз.",
     contentRu:
@@ -25,6 +43,7 @@ export const lessons = [
     description: "Ең керек бастапқы сөздер",
     duration: "20 min",
     badge: "Lesson 2",
+    isPremium: false,
     contentKz:
       "Бұл сабақта күнделікті өмірде жиі қолданылатын ағылшын сөздерін үйренеміз.",
     contentRu:
@@ -43,6 +62,7 @@ export const lessons = [
     description: "Қарапайым осы шақ",
     duration: "25 min",
     badge: "Lesson 3",
+    isPremium: true,
     contentKz:
       "Present Simple күнделікті әрекеттерді, әдеттерді және жалпы шындықтарды айту үшін қолданылады.",
     contentRu:
